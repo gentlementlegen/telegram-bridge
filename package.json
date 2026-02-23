@@ -21,7 +21,8 @@
     "worker": "wrangler dev --env dev --port 3000",
     "deploy": "wrangler deploy --env dev",
     "sms-auth": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/sms-auth.ts",
-    "setup-env": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/setup-env.ts"
+    "setup-env": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/setup-env.ts",
+    "prepare:manifest": "node ./scripts/prepare-manifest.mjs"
   },
   "keywords": [
     "typescript",
