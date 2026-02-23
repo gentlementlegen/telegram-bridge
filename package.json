@@ -22,7 +22,7 @@
     "deploy": "wrangler deploy --env dev",
     "sms-auth": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/sms-auth.ts",
     "setup-env": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/setup-env.ts",
-    "prepare:manifest": "node ./scripts/prepare-manifest.mjs"
+    "prepare:manifest": "curl -fsSL https://raw.githubusercontent.com/ubiquity-os/action-deploy-plugin/main/.github/scripts/update-manifest.js | node - ."
   },
   "keywords": [
     "typescript",
