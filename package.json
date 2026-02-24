@@ -22,7 +22,7 @@
     "deploy": "wrangler deploy --env dev",
     "sms-auth": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/sms-auth.ts",
     "setup-env": "npx tsx src/bot/mtproto-api/bot/scripts/sms-auth/setup-env.ts",
-    "prepare:manifest": "bunx @ubiquity-os/plugin-manifest-tool@latest ."
+    "prepare:manifest": "MANIFEST_PATH=${MANIFEST_PATH:-manifest.json} GITHUB_WORKSPACE=${GITHUB_WORKSPACE:-.} GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-local/${npm_package_name:-plugin}} GITHUB_REF_NAME=${GITHUB_REF_NAME:-local} bunx @ubiquity-os/plugin-manifest-tool@latest"
   },
   "keywords": [
     "typescript",
